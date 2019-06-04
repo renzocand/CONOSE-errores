@@ -17,4 +17,4 @@ let erroresSchema = new Schema({
     },
 });
 
-module.exports = mongoose.model('Errores', erroresSchema);
+module.exports = mongoose.model('Errores', erroresSchema, 'excelcm');
