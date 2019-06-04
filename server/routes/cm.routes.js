@@ -6,12 +6,12 @@ app.get('/cm', async (req, res) => {
     let codigo = req.query.codigo;
     let error = await Errores.find({
         codigo
-    }, 'codigo descripcion')
+    }, '-_id codigo descripcion')
     res.json(error)
 })
 
 app.get('/cmList', async (req, res) => {
-    let errores = await Errores.find({}, 'codigo descripcion')
+    let errores = await Errores.find({}, '-_id codigo descripcion ')
     res.json(errores)
 })
 
