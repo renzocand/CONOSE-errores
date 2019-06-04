@@ -4,7 +4,7 @@ let Schema = mongoose.Schema;
 
 let erroresSchema = new Schema({
     codigo: {
-        type: Number,
+        type: String,
         required: [true, 'El codigo es necesario']
     },
     descripcion: {
