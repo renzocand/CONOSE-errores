@@ -11,9 +11,7 @@ app.get('/cm', async (req, res) => {
 })
 
 app.get('/cmList', async (req, res) => {
-    let errores = await Errores.find({
-        estado: true
-    }, 'codigo descripcion')
+    let errores = await Errores.find({}, 'codigo descripcion')
     res.json(errores)
 })
 
