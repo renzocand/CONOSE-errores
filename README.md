@@ -43,5 +43,5 @@ sudo service nginx restart
 
 
 
-### COMANDO PARA IMPORTAR MONGO
-mongoimport --jsonArray --db excel --collection excelcm --file C:/Users/zapadan/Documents/ProjectosAde/03-excelToJson/db/data.json
+# COMANDO PARA IMPORTAR MONGO
+- mongoimport --jsonArray --db excel --collection excelcm --file C:/Users/zapadan/Documents/ProjectosAde/03-excelToJson/db/data.json
