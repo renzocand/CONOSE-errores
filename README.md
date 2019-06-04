@@ -2,15 +2,15 @@
 ------------------------------------------------
 
 ### CONECTARTE POR SSH
-ssh-keygen -t rsa //DigitalOcean Creas tu propia clave
-ssh root@ip //Entras Digital Ocean
-ssh -i "publicKey" ubuntu@ip //Asi entras por AWS
+- ssh-keygen -t rsa //DigitalOcean Creas tu propia clave1
+- ssh root@ip //Entras Digital Ocean
+- ssh -i "publicKey" ubuntu@ip //Asi entras por AWS
 
 ### CREAR USUARIO AWS
-sudo adduser renzo
-sudo usermod -aG sudo renzo
-sudo nano /etc/ssh/sshd_config  //Cambiar PasswordAuthentication yes
-sudo systemctl restart sshd // Y Listo puedes poner exit
+- sudo adduser renzo
+- sudo usermod -aG sudo renzo
+- sudo nano /etc/ssh/sshd_config  // Cambiar PasswordAuthentication yes
+- sudo systemctl restart sshd // Y Listo puedes poner exit
 
 ### CREAR USUARIO DIGITALOCEAN
 sudo adduser renzo
