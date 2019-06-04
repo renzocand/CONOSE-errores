@@ -2,8 +2,8 @@ const express = require('express')
 const app = express()
 let Errores = require('../models/errores')
 
-app.get('/cm', async (req, res) => {
-    let codigo = req.query.codigo;
+app.get('/', async (req, res) => {
+    let codigo = req.query.cm;
     let error = await Errores.find({
         codigo
     }, '-_id codigo descripcion')
