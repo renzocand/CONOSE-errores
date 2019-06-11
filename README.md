@@ -15,6 +15,7 @@
 ### CREAR USUARIO DIGITALOCEAN
 - sudo adduser renzo
 - sudo usermod -aG sudo renzo
+- nano .ssh/authorized_keys (copiar llave publica a el nuevo usuario que esta en cat ~/.ssh/id_rsa.pub)
 - sudo nano /etc/ssh/sshd_config  //Cambiar PasswordAuthentication no, PermitRootLogin no
 - sudo service ssh restart 
 
