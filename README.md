@@ -51,7 +51,11 @@ sudo service nginx restart
 - sudo apt-get update
 - sudo apt-get install -y mongodb-org 
 
-- sudo nano /etc/systemd/system/mongodb.service
+- sudo nano /etc/systemd/system/mongodb.service // O SINO
+
+- sudo touch /lib/systemd/system/mongodb.service
+- sudo nano /lib/systemd/system/mongodb.service
+
 
 ### PEGAR EN EL FICHERO ESTO
 [Unit]
@@ -66,6 +70,8 @@ ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf
 WantedBy=multi-user.target
 
 ### Seguimos con comandos
+- systemctl list-unit-files --type=service       // Y buscar mongod.service
+- sudo systemctl unmask mongodb      //Si mongod.service esta mask 
 - sudo systemctl start mongodb
 - sudo systemctl status mongodb
 - sudo systemctl enable mongodb   //Con esto se activara mongo al prender la pc
