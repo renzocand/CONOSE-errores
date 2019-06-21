@@ -79,5 +79,9 @@ WantedBy=multi-user.target
 ### Importar una base de datos en MongoDB
 - mongoimport --jsonArray --db excel --collection excelcm --file C:/Users/zapadan/Documents/ProjectosAde/03-excelToJson/db/data.json
 
-
-
+### Comandos MongoDB SHELL
+- mongo       //Para entrar a los comandos
+- show dbs	
+- show collections
+- db.usuarios.drop()    //Elimina la coleccion de usuarios
+- db.usuarios.find()      //Lista todo
