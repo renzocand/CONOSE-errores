@@ -57,9 +57,8 @@ sudo service nginx restart
 - sudo apt-get update
 - sudo apt-get install -y mongodb-org 
 
-- sudo nano /etc/systemd/system/mongodb.service // O SINO
+- sudo nano /etc/systemd/system/mongodb.service // O SINO .... ESTAMEJOR
 
-- sudo touch /lib/systemd/system/mongodb.service
 - sudo nano /lib/systemd/system/mongodb.service
 
 
@@ -77,10 +76,10 @@ WantedBy=multi-user.target
 
 ### Seguimos con comandos
 - systemctl list-unit-files --type=service       // Y buscar mongod.service
-- sudo systemctl unmask mongodb      //Si mongod.service esta mask 
-- sudo systemctl start mongodb
-- sudo systemctl status mongodb
-- sudo systemctl enable mongodb   //Con esto se activara mongo al prender la pc
+- sudo systemctl unmask mongod      //Si mongod.service esta mask 
+- sudo systemctl start mongod
+- sudo systemctl status mongod
+- sudo systemctl enable mongod   //Con esto se activara mongo al prender la pc
 
 ### Importar una base de datos en MongoDB
 - mongoimport --jsonArray --db excel --collection excelcm --file C:/Users/zapadan/Documents/ProjectosAde/03-excelToJson/db/data.json
