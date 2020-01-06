@@ -34,6 +34,15 @@
 - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash  //Instalar nvm(gestor dependencias node)
 - exit
 - nvm install // asi instalara la ultima v de node y npm, con un espacio puedes poner la version que quieras (nvm list)
+- nvm install node // Instala la ultima version mode
+
+- PEGAR ESTE COMANDO PARA PODER USAR SUDO NPM
+```
+  n=$(which node); \
+  n=${n%/bin/node}; \
+  chmod -R 755 $n/bin/*; \
+  sudo cp -r $n/{bin,lib,share} /usr/local
+  ```
 - git clone (repositorio)
 - cd repositorio
 - npm install //Instala las dependencias de nodejs
