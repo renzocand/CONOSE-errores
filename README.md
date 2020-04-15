@@ -104,17 +104,19 @@ WantedBy=multi-user.target
 - sudo nano /etc/nginx/sites-available/dominio.com   
 ```
 server {
-        ## Escucha en el puerto 80 (HTTP)
-        listen   80; 
+        ## Escucha en el puerto 80 (HTTP) 
+        server_name dominio.pe www.dominio.pe;
 
-        ## Raíz donde se encuentra la página Web
-        root /var/www/dominio.com/public_html;
-
-        ## Orden de prioridad de los archivos index
-        index index.html index.htm;
-
-        server_name dominio.com;
+    location / {
+            proxy_pass http://localhost:3000;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+    }
 }
+
 ```
 - sudo ln -s /etc/nginx/sites-available/dominio.com /etc/nginx/sites-enabled/dominio.com      //Crea enlace
 - sudo service nginx restart
