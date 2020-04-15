@@ -99,3 +99,30 @@ WantedBy=multi-user.target
 - show collections
 - db.usuarios.drop()    //Elimina la coleccion de usuarios
 - db.usuarios.find()      //Lista todo
+
+## Configurar nginx para dominios
+- sudo nano /etc/nginx/sites-available/dominio.com   
+```
+server {
+        ## Escucha en el puerto 80 (HTTP)
+        listen   80; 
+
+        ## Raíz donde se encuentra la página Web
+        root /var/www/dominio.com/public_html;
+
+        ## Orden de prioridad de los archivos index
+        index index.html index.htm;
+
+        server_name dominio.com;
+}
+```
+- sudo ln -s /etc/nginx/sites-available/dominio.com /etc/nginx/sites-enabled/dominio.com      //Crea enlace
+- sudo service nginx restart
+- sudo nginx -t //para revisar si esta bien
+
+## Instalar certificado ssl letsencript
+- sudo add-apt-repository ppa:certbot/certbot
+- sudo apt update
+- sudo apt install python-certbot-nginx
+- sudo certbot --nginx -d example.com -d www.example.com
+- URL: https://www.digitalocean.com/community/tutorials/como-asegurar-nginx-con-let-s-encrypt-en-ubuntu-18-04-es
