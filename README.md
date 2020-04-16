@@ -128,3 +128,18 @@ server {
 - sudo apt install python-certbot-nginx
 - sudo certbot --nginx -d example.com -d www.example.com
 - URL: https://www.digitalocean.com/community/tutorials/como-asegurar-nginx-con-let-s-encrypt-en-ubuntu-18-04-es
+
+## GZIP NGIX
+- sudo nano /etc/nginx/nginx.conf o sudo nano /usr/local/nginx/conf/nginx.conf
+- buscar gzip y poner..
+```
+# Activar Compresión Gzip
+gzip on;
+gzip_min_length 1100;
+gzip_buffers 4 32k;
+gzip_types text/plain application/x-javascript text/xml text/css;
+gzip_vary on;
+# Fin de Compresión Gzip
+```
+- /etc/init.d/nginx reload
+- curl --header "Accept-Encoding: gzip,deflate,sdch" -I http://www.tusitio.com
