@@ -18,7 +18,7 @@
 - su - renzo // Entras al usuario renzo
 - mkdir .ssh
 - chmod 700 .ssh // Despues creas una llave publica 
-- nano .ssh/authorized_keys // copias la llave publica q esa en tu pc y la pegas ahí
+- nano .ssh/authorized_keys // --puedes usar CAT .ssh-- copias la llave publica q esa en tu pc y la pegas ahí
 - vi id_rsa.pub // con ese comando "vi" te permitira copiar la llave publica,sales con":q"
 - chmod 600 .ssh/authorized_keys // pones permisos de nuevo y con eso ya puedes entrar al usuario renzo
 - sudo nano /etc/ssh/sshd_config  //Cambiar PasswordAuthentication no, PermitRootLogin no
