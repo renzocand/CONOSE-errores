@@ -143,3 +143,8 @@ gzip_vary on;
 ```
 - /etc/init.d/nginx reload
 - curl --header "Accept-Encoding: gzip,deflate,sdch" -I http://www.tusitio.com
+
+## Descargar archivos del servidor 
+```
+ scp -r admin@199.99.11.99:/home/renzo/dump /home/renzo/Público/
+```
