@@ -123,11 +123,8 @@ server {
 - sudo nginx -t //para revisar si esta bien
 
 ## Instalar certificado ssl letsencript
-- sudo add-apt-repository ppa:certbot/certbot
-- sudo apt update
-- sudo apt install python-certbot-nginx
-- sudo certbot --nginx -d example.com -d www.example.com
-- URL: https://www.digitalocean.com/community/tutorials/como-asegurar-nginx-con-let-s-encrypt-en-ubuntu-18-04-es
+- UR PARECE QUE ESTE METODO YA NO FUNCIONA: https://www.digitalocean.com/community/tutorials/como-asegurar-nginx-con-let-s-encrypt-en-ubuntu-18-04-es
+- MEJOR VER ESTA PAGINA: https://certbot.eff.org/lets-encrypt/ubuntuxenial-nginx.html
 
 ## GZIP NGIX
 - sudo nano /etc/nginx/nginx.conf o sudo nano /usr/local/nginx/conf/nginx.conf
